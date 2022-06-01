@@ -1,0 +1,91 @@
+111111111111111111111111111111111111111111111111111111111111
+docker build .
+docker image ls
+docker image rm uuid
+$ docker image ls
+$ docker run -d --name node-app node-app-image
+docker ps
+$ docker rm fcaa63559c04 -f
+=========>=>=>===>=>==>===>==>=>==>
+$ docker build -t node-app-image .
+
+$ docker image ls
+
+$ docker run -p 3000:3000 -d --name node-app node-app-image
+
+$ winpty docker exec -it ac0e0949b140 //bin//sh
+
+
+222222222222222222222222222222222222222222222222222222
+!!! create .dockerignore file
+
+$ docker rm node-app -f
+
+$ docker build -t node-app-image .
+
+$ docker run -p 3000:3000 -d --name node-app node-app-image
+
+Ojo: cuando se hace un cambio en el codigo de la aplicacion
+ELIMINAR Y BUILDEAR LA IMAGEN Y VOLVER A CREAR EL CONTAINER
+
+
+33333333333333 :: VOLUMENES
+CMD> docker run -v %cd%:/app -p 3000:3000 -d --name node-app node-app-image
+
+$ npm i nodemon --save-dev
+settings package.json
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon -L index.js"
+  },
+
+CMD ["npm", "run", "dev"]
+
+$ docker rm node-app -f
+
+$ docker build -t node-app-image .
+$ docker run -v $(pwd):/app -p 3000:3000 -d --name node-app node-app-image
+
+
+revisar el estado del contenedor
+docker logs cont-name
+
+
+crear el volumen de node_modules
+CMD> docker run -v %cd%:/app -v /app/node_modules -p 3000:3000 -d --name node-app node-app-image 
+
+CONTAINER READ ONLY
+CMD> docker run -v %cd%:/app:ro -v /app/node_modules -p 3000:3000 -d --name node-app node-app-image  
+
+
+444444444 ENVIROAMENT VARIABLES
+CMD> docker run -v %cd%:/app:ro -v /app/node_modules --env PORT=5000 -p 4001:5000 -d --name node-app node-app-image 
+
+Search for the container
+printenv 
+
+
+with a file
+CMD> docker run -v %cd%:/app:ro -v /app/node_modules --env-file ./.env -p 4001:4000 -d --name node-app node-app-image 
+
+
+
+DELETE VOLUMENES
+
+docker volume prune
+
+docker rm cont-name -fv
+
+
+
+5555555555555555555555555555555
+DOCKER-COMPOSE
+
+> docker-compose up -d
+
+$ docker-compose down -v
+
+reconstruir la imagen con D-C
+
+$ docker-compose up -d --build
+
