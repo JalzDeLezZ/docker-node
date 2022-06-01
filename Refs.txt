@@ -89,3 +89,18 @@ reconstruir la imagen con D-C
 
 $ docker-compose up -d --build
 
+
+
+
+
+
+
+666666666666666666666
+DEV AND PROD
+$ docker-compose down -v
+
+$ docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+
+$ docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v
+
+$ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build

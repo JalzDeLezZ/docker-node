@@ -7,7 +7,7 @@ app.use(morgan("dev"));
 
 
 app.get('/', (req, res) => {
-    res.send(`<h1>zz${process.env.MY_ENV}</h1>`);
+    res.send(`<h1>xxxxxxxxxxxxxx${process.env.PORT} - ${port}</h1>`);
 })
 
 app.listen(port, () => {console.log(`Listening on port ${port}`)});
